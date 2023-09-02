@@ -1,0 +1,9 @@
+<?php
+/** @var $block Custom\HrefLang\Block\HrefLang */
+$alternatives = $block->getAlternatives();
+?>
+<?php if ($alternatives): ?>
+    <?php foreach ($alternatives as $hrefLang => $url): ?>
+<link rel="alternate" hreflang="<?php echo $hrefLang ?>" href="<?php echo $url ?>" />
+    <?php endforeach; ?>
+<?php endif ?>
